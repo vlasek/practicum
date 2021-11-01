@@ -1,0 +1,16 @@
+/Users/vladimirkuzmin/Desktop/3010/primer/obj/Debug/net6.0/primer.GlobalUsings.g.cs
+/Users/vladimirkuzmin/Desktop/3010/primer/obj/Debug/net6.0/primer.csproj.AssemblyReference.cache
+/Users/vladimirkuzmin/Desktop/3010/primer/obj/Debug/net6.0/primer.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vladimirkuzmin/Desktop/3010/primer/obj/Debug/net6.0/primer.AssemblyInfoInputs.cache
+/Users/vladimirkuzmin/Desktop/3010/primer/obj/Debug/net6.0/primer.AssemblyInfo.cs
+/Users/vladimirkuzmin/Desktop/3010/primer/obj/Debug/net6.0/primer.csproj.CoreCompileInputs.cache
+/Users/vladimirkuzmin/Desktop/3010/primer/bin/Debug/net6.0/primer
+/Users/vladimirkuzmin/Desktop/3010/primer/bin/Debug/net6.0/primer.deps.json
+/Users/vladimirkuzmin/Desktop/3010/primer/bin/Debug/net6.0/primer.runtimeconfig.json
+/Users/vladimirkuzmin/Desktop/3010/primer/bin/Debug/net6.0/primer.dll
+/Users/vladimirkuzmin/Desktop/3010/primer/bin/Debug/net6.0/ref/primer.dll
+/Users/vladimirkuzmin/Desktop/3010/primer/bin/Debug/net6.0/primer.pdb
+/Users/vladimirkuzmin/Desktop/3010/primer/obj/Debug/net6.0/primer.dll
+/Users/vladimirkuzmin/Desktop/3010/primer/obj/Debug/net6.0/ref/primer.dll
+/Users/vladimirkuzmin/Desktop/3010/primer/obj/Debug/net6.0/primer.pdb
+/Users/vladimirkuzmin/Desktop/3010/primer/obj/Debug/net6.0/primer.genruntimeconfig.cache
