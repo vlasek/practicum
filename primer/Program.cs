@@ -5,7 +5,7 @@
 // элементы, больше 8
 // знакочередования
 
-int minValue=100;
+int minValue=10;
 int maxValue=1000;
 // Console.WriteLine ("Введите мин значение:");
 // minValue = Convert.ToInt32(Console.ReadLine ());
@@ -16,7 +16,8 @@ void PrintArray(int[]arr)
 {
 for (int i=0; i<arr.Length; i++)
  {
-  if (arr[i]!=0) Console.Write($"{(arr[i])} ");
+  
+  Console.Write($"{(arr[i])} ");
  }
  Console.WriteLine();
 }
@@ -40,34 +41,32 @@ i=0;
 PrintArray(A);
 
 Console.WriteLine ("Вывод массива элементов по взрастанию");
-i=1;
-int j=1;
 int current=A[0];
-Console.Write (current+" ");
-
-int[] B = new int [10]; 
-B[0]=A[0];
-
-
-for (i = 0; i < 10; i++)
-
+int count=1;
+while (i<10)
 {
   if (A[i]>current) 
-  {B[j]=A[i]; Console.Write(B[j]+" "); j++;current=A[i];}
-  if (B[j]==0) break;
+  { current=A[i];count=count+1;}
   i++;
 }
+Console.WriteLine(count);
 
+int[] B = new int [count]; 
+B[0]=A[0];
+current=A[0];
+int j=1;
+for (i = 1; i < 10; i++)
+{
+  if (A[i]>current) 
+  {B[j]=A[i]; j++;current=A[i];}
+  
+}
 Console.WriteLine();
 PrintArray(B);
 
 
-
-
-Console.WriteLine ("Вывод массива c числами больше 8");
-i=1;
-j=1;
-
+/*Console.WriteLine ("Вывод массива c числами больше 8");
+i=1; j=1;
 Console.Write (current+" ");
 
 int[] С = new int [10]; 
@@ -75,7 +74,7 @@ int[] С = new int [10];
 while ( i<10 )
 {
   if (A[i]>8) 
-  {С[j]=A[i]; Console.Write(С[j]+" "); j++;break;}
+  {С[j]=A[i]; Console.Write(С[j]+" "); j++;}
   i++;
 }
 Console.WriteLine();
@@ -145,7 +144,7 @@ PrintArray(B);
 
 
 
-
+*/
 
 
 
