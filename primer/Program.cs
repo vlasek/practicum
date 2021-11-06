@@ -12,6 +12,14 @@ minValue = Convert.ToInt32(Console.ReadLine ());
 Console.WriteLine ("Введите макс значение:");
 maxValue = Convert.ToInt32(Console.ReadLine ());
 
+void PrintArray(int[]arr)
+{
+for (int i=0; i<arr.Length; i++)
+ {
+  Console.WriteLine($"{(arr[i]} ");
+ }
+ Console.WriteLine();Console.WriteLine();
+}
 
 int GetRandom ()
 {
@@ -31,6 +39,17 @@ i=0;
 while (i<10)
 { Console.Write(A[i]+" "); i++;}
 Console.WriteLine();
+
+i=1;
+int j=1;
+B[0]=A[0];
+
+while (i<10)
+{
+  if (A[i-1]<A[i]) {B[j]=A[j];
+  j++;}
+  i++;
+}
 
 
 
@@ -53,17 +72,6 @@ Console.Write(A[i]+" ");
 i++;
 }
 
-// печать нового массива B
-i=0;
-while (i<10)
-{
-Console.Write(B[i]+" ");
-i++;
-}
-// while (i<=9)
-// {
-//     Con
-// }
 
 
 
