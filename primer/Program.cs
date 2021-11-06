@@ -5,8 +5,8 @@
 // элементы, больше 8
 // знакочередования
 
-int minValue=10;
-int maxValue=1000;
+int minValue=-100;
+int maxValue=200;
 // Console.WriteLine ("Введите мин значение:");
 // minValue = Convert.ToInt32(Console.ReadLine ());
 // Console.WriteLine ("Введите макс значение:");
@@ -21,8 +21,7 @@ for (int i=0; i<arr.Length; i++)
  }
  Console.WriteLine();
 }
- //Console.WriteLine($"Третьей цифрой числа {i} является {i}");
-
+ 
 int GetRandom ()
 {
   return new Random().Next(minValue,maxValue);
@@ -35,8 +34,7 @@ while (i<10)
 A[i]=GetRandom(); i++;
 }
 // печать массива А
-
-Console.WriteLine("Печать массива:");
+Console.WriteLine($"Печать массива случайных чисел в интервале от {minValue} до {maxValue}");
 i=0;
 PrintArray(A);
 
@@ -49,7 +47,7 @@ while (i<10)
   { current=A[i];count=count+1;}
   i++;
 }
-Console.WriteLine(count);
+Console.WriteLine($"Найдено {count} значений по возрастанию");
 
 int[] B = new int [count]; 
 B[0]=A[0];
@@ -61,91 +59,56 @@ for (i = 1; i < 10; i++)
   {B[j]=A[i]; j++;current=A[i];}
   
 }
-Console.WriteLine();
 PrintArray(B);
+Console.WriteLine();
 
+Console.WriteLine ("Вывод массива c числами больше 8");
+count=0;
+i=0; j=0;
 
-/*Console.WriteLine ("Вывод массива c числами больше 8");
-i=1; j=1;
-Console.Write (current+" ");
-
-int[] С = new int [10]; 
-С[0]=A[0];
 while ( i<10 )
+{
+  if (A[i]>8) {count=count+1;}
+  i++;
+}
+Console.WriteLine($"Найдено {count} значений больше 8");
+int[] D = new int [count]; 
+j=0;
+
+for (i=0; i<10; i++)
+
 {
   if (A[i]>8) 
-  {С[j]=A[i]; Console.Write(С[j]+" "); j++;}
-  i++;
-}
-Console.WriteLine();
-PrintArray(B);
-
-
-// if (i%2==0)
-// {
-//   if (A[i]<0) 
-// }
-
-
-
-Console.WriteLine ("Вывод массива знакочередования");
-i=1;
-j=1;
-current=A[0];
-Console.Write (current+" ");
-
-B[0]=A[0];
-while ( i<10 )
-{
-  if (A[i]>current) 
-  {B[j]=A[i]; Console.Write(B[j]+" "); j++;current=A[i];}
-  i++;
+  {D[j]=A[i]; j++;}
   
 }
+PrintArray(D);
 Console.WriteLine();
 
-PrintArray(B);
 
+int znak=1;
+Console.WriteLine ("Вывод массива знакочередования");
+if (A[0]<0) znak=0;
+//Console.WriteLine($"{znak} {A[0]}");
+i=0; count=0;
+while (i<10)
+{
+  if ((A[i]<0) && (znak==0)) {count=count+1;znak=1;}
+    else if ((A[i]>0) && (znak==1)) {count=count+1;znak=0;}
+  i++;
+}  
+Console.WriteLine($"Найдено {count} значений со знакочередованием");
 
+int[] E = new int [count]; 
+j=1;
+E[0]=A[0];
+if (A[0]<0) znak=0;
+for (i=0; i<10; i++)
 
-//B[0]=A[0];
-
-// while (i<10)
-// {
-//   if (A[i-1]<A[i]) {B[j]=A[j];
-//   j++;}
-//   i++;
-// }
-
-
-
-
-// i=0;
-// int[] B = new int [10];
-// while (i<10)
-// {
-//   if (A[i]>80) 
-//   {
-//   B[i]= A[i+1];
-//   }
-//   i++;
-// }
-
-// i=0;
-// while (i<10)
-// {
-// Console.Write(A[i]+" ");
-// i++;
-// }
-
-
-
-
-
-
-
-*/
-
-
-
-
+{
+  if ((A[i]<0) && (znak==0)) {E[j]=A[i]; j++;;znak=1;}
+    else if ((A[i]>0) && (znak==1)) {E[j]=A[i]; j++;znak=0;}
+  
+}
+PrintArray(E);
+Console.WriteLine();
