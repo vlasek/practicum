@@ -5,7 +5,7 @@
 // элементы, больше 8
 // знакочередования
 
-int minValue=-1000;
+int minValue=100;
 int maxValue=1000;
 // Console.WriteLine ("Введите мин значение:");
 // minValue = Convert.ToInt32(Console.ReadLine ());
@@ -16,33 +16,27 @@ void PrintArray(int[]arr)
 {
 for (int i=0; i<arr.Length; i++)
  {
-  Console.Write($"{(arr[i])} ");
+  if (arr[i]!=0) Console.Write($"{(arr[i])} ");
  }
  Console.WriteLine();
 }
-
-
-
  //Console.WriteLine($"Третьей цифрой числа {i} является {i}");
 
 int GetRandom ()
 {
   return new Random().Next(minValue,maxValue);
-  }
-int i=0;
+}
 
+int i=0;
 int[] A = new int [10];
 while (i<10)
 {
-A[i]=GetRandom();
-i++;
+A[i]=GetRandom(); i++;
 }
 // печать массива А
+
 Console.WriteLine("Печать массива:");
 i=0;
-while (i<10)
-{ Console.Write(A[i]+" "); i++;}
-Console.WriteLine();
 PrintArray(A);
 
 Console.WriteLine ("Вывод массива элементов по взрастанию");
@@ -53,13 +47,15 @@ Console.Write (current+" ");
 
 int[] B = new int [10]; 
 B[0]=A[0];
-while ( i<10 )
+
+
+for (i = 0; i < 10; i++)
+
 {
   if (A[i]>current) 
   {B[j]=A[i]; Console.Write(B[j]+" "); j++;current=A[i];}
+  if (B[j]==0) break;
   i++;
-  //Console.WriteLine(B[j]);
-
 }
 
 Console.WriteLine();
@@ -79,13 +75,18 @@ int[] С = new int [10];
 while ( i<10 )
 {
   if (A[i]>8) 
-  {С[j]=A[i]; Console.Write(С[j]+" "); j++;}
+  {С[j]=A[i]; Console.Write(С[j]+" "); j++;break;}
   i++;
-  //Console.WriteLine(B[j]);
-
 }
 Console.WriteLine();
 PrintArray(B);
+
+
+// if (i%2==0)
+// {
+//   if (A[i]<0) 
+// }
+
 
 
 Console.WriteLine ("Вывод массива знакочередования");
@@ -101,9 +102,9 @@ while ( i<10 )
   {B[j]=A[i]; Console.Write(B[j]+" "); j++;current=A[i];}
   i++;
   
-
 }
 Console.WriteLine();
+
 PrintArray(B);
 
 
